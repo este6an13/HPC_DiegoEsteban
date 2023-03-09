@@ -5,14 +5,13 @@
  
 int main()
 {
-    std::vector<double> v(50); // vector of numbers
+    std::vector<int> v(1000); // vector of numbers
     std::random_device rd;  // seed gen
     std::mt19937 gen(rd()); // engine
-    
-    std::normal_distribution<double> distrib(-10.0, 17.0);
+    std::uniform_int_distribution<> distrib(0, 10);
   
     double num;
-    for (int i = 0; i < 50; i++) {
+    for (int i = 0; i < 1000; i++) {
         num = distrib(gen);
         v[i] = num;
         std::cout << num << '\n';
@@ -32,4 +31,3 @@ int main()
     if (it != v.end())
         std::cout << "El primer elemento mayor que 3.0 es " << *it << '\n';
 }
-
