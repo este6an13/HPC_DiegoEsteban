@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.16)  9 MAR 2023 02:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.2.16)  10 MAR 2023 00:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -190,20 +190,17 @@ e
 File: histogramas.pdf Graphic file (type pdf)
 <use histogramas.pdf, page 1>
 Package pdftex.def Info: histogramas.pdf , page1 used on input line 19.
-(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+(pdftex.def)             Requested size: 284.52756pt x 213.40594pt.
 <histogramas.pdf, id=2, page=2, 462.52798pt x 346.89601pt>
 File: histogramas.pdf Graphic file (type pdf)
 <use histogramas.pdf, page 2>
 Package pdftex.def Info: histogramas.pdf , page2 used on input line 20.
-(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+(pdftex.def)             Requested size: 284.52756pt x 213.40594pt.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \vbox (81.65762pt too high) has occurred while \output is active []
-
-
-[2 <./histogramas.pdf> <./histogramas.pdf>]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./histogramas.pdf> <./hist
+ogramas.pdf>]
 This exam contains 0 questions with 0 parts, 0 subparts, and 0 subsubparts.
 (./resultados.aux) ) 
 Here is how much of TeX's memory you used:
@@ -213,15 +210,15 @@ Here is how much of TeX's memory you used:
  20453 multiletter control sequences out of 15000+600000
  470465 words of font info for 32 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 55i,10n,62p,205b,249s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,10n,62p,205b,178s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmc
 sc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on resultados.pdf (2 pages, 56616 bytes).
+Output written on resultados.pdf (1 page, 55943 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 23 compressed objects within 1 object stream
+ 66 PDF objects out of 1000 (max. 8388607)
+ 21 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
