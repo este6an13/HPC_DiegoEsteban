@@ -22,21 +22,21 @@
     // STRONG SCALING
 
         // WITH EIGEN WITHOUT O3
-        // for S in 10 50 100 200 500 1000 2000 3000 4000; do ./matmul 1 $S 30 2> /dev/null > strong_eigen.txt; done
+        // for S in 10 50 100 200 500 1000 2000 3000 4000; do ./matmul 1 $S 30 2> /dev/null >> strong_eigen.txt; done
         
         // WITH EIGEN WITH O3
-        // for S in 10 50 100 200 500 1000 2000 3000 4000; do ./matmul_O3 1 $S 30 2> /dev/null > strong_eigen_O3.txt; done
+        // for S in 10 50 100 200 500 1000 2000 3000 4000; do ./matmul_O3 1 $S 30 2> /dev/null >> strong_eigen_O3.txt; done
 
         // WITHOUT EIGEN WITHOUT O3
-        // for S in 10 50 100 200 500 1000 2000 3000 4000; do ./matmul 0 $S 30 2> /dev/null > strong_simple.txt; done
+        // for S in 10 50 100 200 500 1000 2000 3000 4000; do ./matmul 0 $S 30 2> /dev/null >> strong_simple.txt; done
         
         // WITHOUT EIGEN WITH O3
-        // for S in 10 50 100 200 500 1000 2000 3000 4000; do ./matmul_O3 0 $S 30 2> /dev/null > strong_simple_O3.txt; done
+        // for S in 10 50 100 200 500 1000 2000 3000 4000; do ./matmul_O3 0 $S 30 2> /dev/null >> strong_simple_O3.txt; done
 
     // WEAK SCALING
 
         // WITH EIGEN WITH 03
-        // for th in seq 16; do OMP_NUM_THREADS=$th ./matmul_O3_OPM 1 4000 30 2> /dev/null > weak_eigen_O3_OMP.txt; done
+        // for th in seq 16; do echo "$th" >> weak_eigen_O3_OMP.txt OMP_NUM_THREADS=$th ./matmul_O3_OPM 1 4000 30 2> /dev/null >> weak_eigen_O3_OMP.txt; done
 
 
 void matmul_eigen(int size, int nreps);
