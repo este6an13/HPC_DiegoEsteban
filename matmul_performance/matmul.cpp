@@ -89,10 +89,6 @@ void matmul_simple(int size, int nreps)
     std::vector<double> A(size * size), B(size * size), C(size * size);
     fill(A); fill(B);
 
-    // create matrices
-    Eigen::MatrixXd A = Eigen::MatrixXd::Random(size, size);
-    Eigen::MatrixXd B = Eigen::MatrixXd::Random(size, size);
-
     // start time measure
     auto start = std::chrono::steady_clock::now(); // wall clock
     std::clock_t c1 = std::clock(); // cpu clock
