@@ -36,8 +36,12 @@
     // WEAK SCALING
 
         // WITH EIGEN WITH 03
-        // for th in seq 16; do echo "$th" >> weak_eigen_O3_OMP.txt OMP_NUM_THREADS=$th ./matmul_O3_OPM 1 4000 30 2> /dev/null >> weak_eigen_O3_OMP.txt; done
-
+        /*
+        for th in `seq 16`; do 
+		echo "$th" >> weak_eigen_O3_OMP.txt 
+		OMP_NUM_THREADS=$th ./matmul_O3_OPM 1 4000 30 2> /dev/null >> weak_eigen_O3_OMP.txt; 
+	done
+        */
 
 void matmul_eigen(int size, int nreps);
 void matmul_simple(int size, int nreps);
