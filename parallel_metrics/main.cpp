@@ -4,28 +4,25 @@
 #include <vector>
 #include <execution>
 #include <chrono>
-#include <tbb/task_scheduler_init.h>
+#include <omp.h>
 
 template<typename Func>
 void time_function(Func func, int T, int P);
 
 int main(int argc, char ** argv)
 {
-    if (argc != 3) {
+    if (argc != 2) {
         std::cerr << "Error: Usage: \n" << argv[0] << "T P\n";
-        std::cerr << "T: Number of Threads\n";
         std::cerr << "P: Execution Policy\n";
         return 1;
     }
     
-    const int T = std::stoi(argv[1]); // Number of Threads
-    const int P = std::stoi(argv[2]); // Execution Policy
+    const int T = omp_get_max_threads(); // Number of Threads
+    const int P = std::stoi(argv[1]); // Execution Policy
 
     const long ARRAY_SIZE = 10000;
     std::vector<double> myArray(ARRAY_SIZE);
     std::iota(myArray.begin(), myArray.end(), 0);
-
-    tbb::task_scheduler_init init(T);
 
     if (P == 1) {
         auto execution = [&myArray](){return std::reduce(std::execution::seq, myArray.begin(), myArray.end());};
@@ -59,5 +56,5 @@ void time_function(Func func, int T, int P) {
     std::cout << T << " " << P << " " << duration_ms/1000.0 << "\n";
 }
 
-// g++ -g -std=c++17 -O3 -fsanitize=address,undefined,thread main.cpp -o main.x
-// parallel '/main.x {} {} >/dev/null >> times.txt' ::: $(seq 16) ::: $(seq 4)
+// g++ -g -std=c++17 -O3 -fopenmp -fsanitize=address,undefined m.cpp -o main.x
+// for t in $(seq 17); do parallel -j 4 "OMP_NUM_THREADS=$t ./main.x {} >/dev/null >> times.txt" ::: $(seq 4); done
