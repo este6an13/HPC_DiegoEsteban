@@ -20,7 +20,7 @@ int main(int argc, char ** argv)
     const int T = omp_get_max_threads(); // Number of Threads
     const int P = std::stoi(argv[1]); // Execution Policy
 
-    const long ARRAY_SIZE = 10000;
+    const long ARRAY_SIZE = 200000000;
     std::vector<double> myArray(ARRAY_SIZE);
     std::iota(myArray.begin(), myArray.end(), 0);
 
@@ -56,5 +56,5 @@ void time_function(Func func, int T, int P) {
     std::cout << T << " " << P << " " << duration_ms/1000.0 << "\n";
 }
 
-// g++ -g -std=c++17 -O3 -fopenmp -fsanitize=address,undefined m.cpp -o main.x
+// g++ -g -std=c++17 -O3 -fopenmp -fsanitize=address,undefined main.cpp -o main.x
 // for t in $(seq 17); do parallel -j 4 "OMP_NUM_THREADS=$t ./main.x {} >/dev/null >> times.txt" ::: $(seq 4); done
