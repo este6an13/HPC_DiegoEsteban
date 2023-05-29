@@ -10,7 +10,7 @@
     // mpic++ pi.cpp -o pi.x
 
 // EXECUTION 1: to generate the file to plot speed up and efficiency
-    // for ((np=1; np<=17; np+=2)); do (time -p mpirun -np $np --oversubscribe ./pi.x 1200000000 > /dev/null) 2>&1 | awk -v np=$np '/real/ {print np, $0}' >> times.txt; done
+    // for ((np=1; np<=33; np+=2)); do (time -p mpirun -np $np --oversubscribe ./pi.x 1200000000 > /dev/null) 2>&1 | awk -v np=$np '/real/ {print np, $0}' >> times.txt; done
 
 // EXECUTION 2: to generate the file to plot relative error
     // for N in 1000 5000 10000 50000 100000 500000 1000000 5000000 10000000 50000000 100000000 500000000 1200000000; do mpirun -np 4 ./pi.x $N > /dev/null >> deltas.txt; done
