@@ -1,0 +1,9 @@
+srun: Job step's --cpus-per-task value exceeds that of job (4 > 1). Job step may never run.
+stress: info: [31306] dispatching hogs: 4 cpu, 0 io, 0 vm, 0 hdd
+stress: info: [10919] dispatching hogs: 4 cpu, 0 io, 0 vm, 0 hdd
+stress: info: [26654] dispatching hogs: 4 cpu, 0 io, 0 vm, 0 hdd
+stress: info: [31305] dispatching hogs: 4 cpu, 0 io, 0 vm, 0 hdd
+stress: info: [31306] successful run completed in 20s
+stress: info: [31305] successful run completed in 20s
+stress: info: [10919] successful run completed in 20s
+stress: info: [26654] successful run completed in 20s
